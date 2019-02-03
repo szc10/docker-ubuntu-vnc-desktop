@@ -1,6 +1,6 @@
 .PHONY: build run
 
-REPO  ?= szc10/lxqt
+REPO  ?= szc10/vscode
 TAG   ?= latest
 IMAGE ?= dorowu/ubuntu-desktop-lxde-vnc:bionic-lxqt
 HTTP_PASSWORD ?= 123456

@@ -1,7 +1,7 @@
 version: "2"
 services:
   code:
-    image: szc10/lxqt
+    image: szc10/vscode
     # volumes:
     #   - ./:/workspace
     expose:
