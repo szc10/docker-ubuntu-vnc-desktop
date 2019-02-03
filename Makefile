@@ -1,18 +1,14 @@
 .PHONY: build run
 
-REPO  ?= lxqt
+REPO  ?= szc10/lxqt
 TAG   ?= latest
 IMAGE ?= dorowu/ubuntu-desktop-lxde-vnc:bionic-lxqt
-LOCALBUILD ?= tw
 HTTP_PASSWORD ?= 123456
 CUSTOM_USER ?= ubuntu
 PASSWORD ?= ubuntu
 
 build:
-	docker build -t lxqt --build-arg image=dorowu/ubuntu-desktop-lxde-vnc:bionic-lxqt .
-
-	# docker build -t $(REPO):$(TAG) --build-arg localbuild=$(LOCALBUILD) --build-arg image=$(IMAGE) .
-
+	docker build -t $(REPO):$(TAG) --build-arg image=$(IMAGE) .
 run:
 	docker run --rm \
 		-p 6080:80 -p 6081:443 \

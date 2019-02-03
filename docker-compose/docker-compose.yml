@@ -1,0 +1,10 @@
+version: "2"
+services:
+  code:
+    image: szc10/lxqt
+    # volumes:
+    #   - ./:/workspace
+    expose:
+      - 6080  
+    ports:
+      - 6080:80

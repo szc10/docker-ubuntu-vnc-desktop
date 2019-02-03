@@ -25,3 +25,5 @@ cd web
 yarn add
 BACKEND=http://127.0.0.1:6080 npm run dev
 ```
+
+docker build -t lxqt --build-arg image=dorowu/ubuntu-desktop-lxde-vnc:bionic-lxqt .
