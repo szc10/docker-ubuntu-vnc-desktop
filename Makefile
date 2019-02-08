@@ -1,8 +1,8 @@
 .PHONY: build run
 
-REPO  ?= szc10/vscode
+REPO  ?= szc10/vscodenodejs
 TAG   ?= latest
-IMAGE ?= dorowu/ubuntu-desktop-lxde-vnc:bionic-lxqt
+IMAGE ?= szc10/vscode
 HTTP_PASSWORD ?= 123456
 CUSTOM_USER ?= ubuntu
 PASSWORD ?= ubuntu
