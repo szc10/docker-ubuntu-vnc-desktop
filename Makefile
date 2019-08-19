@@ -1,8 +1,8 @@
 .PHONY: build run
 
-REPO  ?= szc10/vscode
+REPO  ?= szc10/xmake
 TAG   ?= latest
-IMAGE ?= dorowu/ubuntu-desktop-lxde-vnc:bionic-lxqt
+IMAGE ?= szc10/vscode
 HTTP_PASSWORD ?= 123456
 CUSTOM_USER ?= ubuntu
 PASSWORD ?= ubuntu
@@ -11,9 +11,7 @@ build:
 	docker build -t $(REPO):$(TAG) --build-arg image=$(IMAGE) .
 run:
 	docker run --rm \
-		-p 6080:80 -p 6081:443 \
-		-v ${PWD}:/src:ro \
-		-e HTTP_PASSWORD=$(HTTP_PASSWORD) \
+		-p 6080:80 \
 		-e USER=$(CUSTOM_USER) \
 		-e PASSWORD=$(PASSWORD) \
 		--name ubuntu-desktop-lxde-test \
