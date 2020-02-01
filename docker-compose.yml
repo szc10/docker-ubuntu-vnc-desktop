@@ -1,7 +1,7 @@
 version: "2"
 services:
   code:
-    image: szc10/vscode
+    image: szc10/chromedev
     # volumes:
     #   - ./:/workspace
     expose:

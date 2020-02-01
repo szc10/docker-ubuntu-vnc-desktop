@@ -1,14 +1,13 @@
 .PHONY: build run
 
-REPO  ?= szc10/vscode
+REPO  ?= szc10/chromedev
 TAG   ?= latest
-IMAGE ?= dorowu/ubuntu-desktop-lxde-vnc:bionic-lxqt
 HTTP_PASSWORD ?= 123456
 CUSTOM_USER ?= ubuntu
 PASSWORD ?= ubuntu
 
 build:
-	docker build -t $(REPO):$(TAG) --build-arg image=$(IMAGE) .
+	docker build -t $(REPO):$(TAG) .
 run:
 	docker run --rm \
 		-p 6080:80 -p 6081:443 \
